@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>BBS</title>
+</head>
+<body>
+<h1>BBS</h1>
+<ol>
+    <li th:each="comment:${commentList}"><span th:text="${comment.name}">名前</span>: <span th:text="${comment.text}">テキスト</span></li>
+</ol>
+<form th:action="@{/bbs/}" method="post">
+    <input type="text" name="name" />
+    <input type="text" name="text" /><input type="submit" />
+</form>
+</body>
+</html>
