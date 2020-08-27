@@ -27,7 +27,7 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(org.h2.Driver.class.getName());
+        dataSource.setDriverClassName("org.h2.Driver");
         dataSource.setUrl("jdbc:h2:tcp://localhost/~/tmp/bulletinboard");
         dataSource.setUsername("sa");
         dataSource.setPassword("password");
